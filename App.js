@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import ImageChanger from "./src/components/ImageChanger";
-import NumberBox from "./src/components/NumberBox";
+import Main from "./src/components/Main";
 
 export default function App() {
   const optionsInGame = [
-    "ostrich",
+    "Bear",
     "Lion",
     "Tiger",
     "Butterfly",
@@ -15,8 +15,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <ImageChanger optArr={optionsInGame}/>
-      <NumberBox optsArr={optionsInGame}/>
+      {/* <ImageChanger optArr={optionsInGame}/> */}
+      <Main optsArr={optionsInGame}/>
     </View>
   );
 }
@@ -24,7 +24,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    padding: 20,
+    maxWidth: '100vw',
+    maxHeight: '100vh',
+    backgroundColor: "#2AF5FF",
     alignItems: "center",
     justifyContent: "center",
   },
